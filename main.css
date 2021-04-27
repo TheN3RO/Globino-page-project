@@ -172,6 +172,7 @@
 		}
 
 		.btn-view-more {
+			cursor: pointer;
 			margin: 10px;
 			margin-right: 50px;
 			background-color: transparent;
