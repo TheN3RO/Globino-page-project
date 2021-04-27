@@ -1,0 +1,332 @@
+/*Generally used*/
+* {
+	scroll-behavior: smooth;
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+/*Header section*/
+
+.header{
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+}
+
+	.main-photo {
+		position: relative;
+		color: #fff;
+		min-height: calc(100vh - 70px);
+		background: url('img/header/kościół.jpg') center/cover no-repeat ;
+		text-align: center;
+		overflow: hidden;
+		text-shadow: 0 0 15px rgba(0, 0, 0, .3);
+		padding: 300px 0;
+	}
+
+	.header .container {
+		max-width: 911px;
+	}
+	/*Galery stylesheet*/
+	.header-logo {
+		transform: rotate(-15deg);
+		float: left;
+	}
+
+    .header h1 {
+        font-size: 10em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+/*Navigation section*/
+
+.nav {
+	background-color: #757575;
+    height: 70px;
+	text-align: center;
+    z-index: 99;
+    position: sticky;
+    top: 0px;
+}
+
+	ol{
+		margin:0;
+		list-style-type: none;
+		font-size: 26px;
+		height: 70px;
+		line-height: 200%;
+		display: inline-block;
+	}
+
+	ol a{
+		color: #000;
+		text-decoration: none;
+		display: block;
+	}
+
+	ol > li
+	{
+		background-color: #757575;
+		padding: 10px;
+		float: left;
+		width: 200px;
+		height: 70px;
+		cursor: pointer;
+		position: relative;
+    	outline: none;
+	}
+
+	ol > li:before {
+		position: absolute;
+		border: 3px solid transparent;
+		content: " ";
+		width: 0;
+		height: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	ol > li:after {
+		position: absolute;
+		border: 3px solid transparent;
+		content: " ";
+		width: 0;
+		height: 0;
+		top: 0;
+		right: 0;
+	}
+
+	ol > li:hover:before
+	{
+		width: 196px;
+		height: 66px;
+		border: 4px solid #8b8b8b;
+		border-right: none;
+		border-bottom: none;
+		transition: height 0.2s linear,
+                	width 0.5s linear 0.2s;
+	}
+
+	ol > li:hover:after
+	{
+		width: 196px;
+		height: 67px;
+		border: 4px solid #3d3d3d;
+		border-left: none;
+		border-top: none;
+		transition: height 0.2s linear,
+                	width 0.5s linear 0.2s;
+	}
+
+/*Article section*/
+
+.article {
+	background-color: #d1cfcf;
+}
+
+	.article .container {
+		display: flex;
+		word-wrap: break-word;
+	}
+
+	.article-divs {
+		width: auto;
+		margin: 50px;
+		margin-top: 100px;
+		margin-bottom: 100px;
+	}
+
+	.article-divs-img {
+		display: flex;
+		float: left;
+	}
+
+	.article-divs-img img {
+		height: 400px;
+		width: 400px;
+		object-fit: cover;
+	}
+
+	.article-divs-content {
+		font-size: 16px;
+		float: left;
+		max-width: 600px;
+		min-width: auto;
+		padding: 40px;
+	}
+
+		.article-divs-content h2 {
+			font-size: 24px;
+		}
+
+		.article-divs-content p {
+			padding-top: 10px;
+		}
+
+		.btn-view-more {
+			margin: 10px;
+			margin-right: 50px;
+			background-color: transparent;
+			padding: 10px;
+			width: 144px;
+			color: #000;
+			border: 3px solid #555555;
+			border-radius: 10px;
+			transition: all 0.3s ease-in-out;
+		}
+
+		.btn-view-more:hover {
+			color: #fff;
+			background-color: #555555;
+		}
+
+	.parallax-effect {
+		min-height: 600px;
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	/*Gallery stylesheet*/
+	.gallery {
+		margin: 33px;
+		position: relative;
+		cursor: pointer;
+		transition: opacity .3s ease-in-out;
+	}
+
+	.gallery img{
+		height: 300px;
+		width: 300px;
+		object-fit: cover;
+	}
+
+	.gallery .article-divs-img-description {
+		padding: 12px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		font-family: 'Original Surfer', cursive;
+		position: absolute;
+		display: block;
+		width: 300px;
+		height: 60px;
+		background-color: #111;
+		left: 0;
+		bottom: 4px;
+		opacity: 0;
+		transition: opacity 0.5s ease-in-out;
+	}
+
+	.gallery:hover .article-divs-img-description {
+		opacity: 0.8;
+	}
+
+/*Social media section*/
+
+.social {
+	background-color: #3d3d3d;
+	text-align: center;
+	height: 100px;
+}
+
+	.social-container {
+		display: inline-flex;
+		margin-left: auto;
+		margin-right: auto;
+		width: max-content;
+	}
+
+	.social-divs {
+		padding-top: 5px;
+		text-align: center;
+		float: left;
+		height: 80px;
+		width: 100px;
+		margin: 10px;
+		transition: all .3s ease-in-out;
+	}
+
+		.facebook:hover {
+			background-color: #4668b3;
+			-webkit-transform: scale(1.15) rotate(-2deg);
+			-ms-transform: scale(1.15) rotate(-2deg);
+			transform: scale(1.15) rotate(-2deg);
+		}
+
+		.mail:hover {
+			background-color: #d95333;
+			-webkit-transform: scale(1.15) rotate(-2deg);
+			-ms-transform: scale(1.15) rotate(-2deg);
+			transform: scale(1.15) rotate(-2deg);
+		}
+
+		.school:hover {
+			background-color: #316133;
+			-webkit-transform: scale(1.15) rotate(-2deg);
+			-ms-transform: scale(1.15) rotate(-2deg);
+			transform: scale(1.15) rotate(-2deg);
+		}
+
+		.youtube:hover {
+			background-color: #FF0000;
+			-webkit-transform: scale(1.15) rotate(-2deg);
+			-ms-transform: scale(1.15) rotate(-2deg);
+			transform: scale(1.15) rotate(-2deg);
+		}
+/*Footer section*/
+
+.footer {
+	border-top: 3px solid #a1a1a1;
+	color: #fff;
+	height: 150px;
+	background: linear-gradient(180deg, rgba(61, 61, 61,1) 4.980042575838212%,rgba(26, 26, 26,1) 97.74215007982968%);
+}
+
+	.footer-rodo a{
+		color: #fff;
+		float: left;
+		height: 100px;
+		text-align: center;
+		display: block;
+		padding: 40px;
+	}
+	
+	.footer-copyright {
+		height: 100px;
+		padding: 40px;
+		text-align: right;
+	}
+
+	@media only screen and (max-width: 500px) {
+		.article-divs-img img {
+			width: 100%;
+		}
+	}
+
+	@media only screen and (max-width: 600px) {
+		.social-divs {
+			width: 80px;
+		}
+	}
+
+	@media only screen and (max-width: 680px) {
+		.header h1 {
+			font-size: 600%;
+		}
+	}
+
+	@media only screen and (max-width: 926px) {
+		.header-logo {
+			width: 100%;
+		}
+	}
